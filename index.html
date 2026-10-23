@@ -50,7 +50,7 @@
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
   .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-  .brand img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+  .brand img{width:50px;height:50px;object-fit:contain}
   .brand-fallback{width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:none;align-items:center;justify-content:center;font-family:'Montserrat';font-weight:900}
   .brand-text{font-family:'Montserrat',sans-serif;font-weight:800;line-height:1.05;color:var(--navy);font-size:.95rem;letter-spacing:.06em}
   .brand-text small{display:block;font-size:.62rem;letter-spacing:.32em;color:var(--blue);font-weight:800}
@@ -70,9 +70,10 @@
   .hero h1 .gold{color:var(--gold)}
   .hero p.lead{font-size:1.15rem;max-width:540px;opacity:.92;margin-bottom:2rem}
   .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-  .hero-card{background:#fff;color:var(--ink);border-radius:24px;padding:30px;box-shadow:0 25px 60px rgba(0,0,0,.25);position:relative}
+  .hero-card{margin-top:56px;background:#fff;color:var(--ink);border-radius:24px;padding:30px;box-shadow:0 25px 60px rgba(0,0,0,.25);position:relative}
   .hero-card::after{content:"KNOWLEDGE WINS";position:absolute;top:-16px;right:22px;background:var(--gold);color:var(--navy);font-family:'Montserrat';font-weight:900;font-size:.75rem;letter-spacing:.12em;padding:.45rem .9rem;border-radius:8px}
-  .hero-card h3{color:var(--navy);font-size:1.2rem;margin-bottom:1rem}
+  .hero-logo{width:110px;height:110px;margin:-74px auto 14px;border-radius:50%;box-shadow:0 10px 25px rgba(0,0,0,.25);background:#fff}
+  .hero-card h3{text-align:center;color:var(--navy);font-size:1.2rem;margin-bottom:1rem}
   .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .stat{background:var(--bg-alt);border-radius:14px;padding:16px}
   .stat b{display:block;font-family:'Montserrat';font-size:1.8rem;font-weight:900;color:var(--blue)}
@@ -226,6 +227,7 @@
         </div>
       </div>
       <div class="hero-card reveal">
+        <img class="hero-logo" src="logo.png" alt="Logo Pusat Tuisyen Akademik Darul Bakti Kubang Pasu">
         <h3>Kenapa ibu bapa pilih kami</h3>
         <div class="stat-row">
           <div class="stat"><b>1979</b><span>Ditubuhkan di Jitra</span></div>
