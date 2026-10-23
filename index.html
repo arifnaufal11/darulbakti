@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akademik Darul Bakti | Pusat Tuisyen Jitra sejak 1979</title>
+<meta name="description" content="Pusat Tuisyen Akademik Darul Bakti, Jitra, Kedah. Tuisyen Tahun 2 hingga Tingkatan 5. Matematik, Sains, Sejarah, BM, English, Add Math, Biologi. Sejak 1979.">
+<meta property="og:title" content="Akademik Darul Bakti | Knowledge Wins">
+<meta property="og:description" content="Pusat tuisyen dipercayai di Jitra sejak 1979. Pendaftaran Sesi 2026 dibuka.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1b89bf;
+    --blue-dark:#1d3f8f;
+    --navy:#14285c;
+    --gold:#cbc858;
+    --gold-soft:#f3f2d6;
+    --ink:#1b2333;
+    --muted:#5b6578;
+    --bg:#ffffff;
+    --bg-alt:#f4f8fb;
+    --line:#dfe7ee;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(20,40,92,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Quicksand',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+  h1,h2,h3,.display{font-family:'Montserrat',sans-serif;line-height:1.15;letter-spacing:-.01em}
+  .eyebrow{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+  section{padding:88px 0}
+  .section-head{max-width:640px;margin-bottom:44px}
+  .section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:.4rem 0 .8rem;color:var(--navy)}
+  .section-head p{color:var(--muted)}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:.55rem;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;text-decoration:none;padding:.95rem 1.5rem;border-radius:999px;transition:transform .15s,box-shadow .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:#25d366;color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.35)}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-ghost{border:2px solid rgba(255,255,255,.6);color:#fff}
+  .btn svg{width:20px;height:20px}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+  .brand img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+  .brand-fallback{width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:none;align-items:center;justify-content:center;font-family:'Montserrat';font-weight:900}
+  .brand-text{font-family:'Montserrat',sans-serif;font-weight:800;line-height:1.05;color:var(--navy);font-size:.95rem;letter-spacing:.06em}
+  .brand-text small{display:block;font-size:.62rem;letter-spacing:.32em;color:var(--blue);font-weight:800}
+  .nav-links{display:flex;gap:1.6rem;list-style:none;align-items:center}
+  .nav-links a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink)}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-cta{padding:.6rem 1.1rem;font-size:.85rem}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .menu-btn span{display:block;width:24px;height:2.5px;background:var(--navy);margin:5px 0;border-radius:2px}
+
+  /* hero */
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--blue-dark) 45%,var(--blue) 100%);color:#fff;padding:96px 0 110px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:34px 34px;pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative}
+  .badge{display:inline-flex;gap:.5rem;align-items:center;background:rgba(203,200,88,.18);border:1px solid rgba(203,200,88,.6);color:var(--gold);font-weight:700;font-size:.85rem;padding:.4rem .9rem;border-radius:999px;margin-bottom:1.4rem}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:900;text-transform:uppercase;margin-bottom:1.2rem}
+  .hero h1 .gold{color:var(--gold)}
+  .hero p.lead{font-size:1.15rem;max-width:540px;opacity:.92;margin-bottom:2rem}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+  .hero-card{background:#fff;color:var(--ink);border-radius:24px;padding:30px;box-shadow:0 25px 60px rgba(0,0,0,.25);position:relative}
+  .hero-card::after{content:"KNOWLEDGE WINS";position:absolute;top:-16px;right:22px;background:var(--gold);color:var(--navy);font-family:'Montserrat';font-weight:900;font-size:.75rem;letter-spacing:.12em;padding:.45rem .9rem;border-radius:8px}
+  .hero-card h3{color:var(--navy);font-size:1.2rem;margin-bottom:1rem}
+  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .stat{background:var(--bg-alt);border-radius:14px;padding:16px}
+  .stat b{display:block;font-family:'Montserrat';font-size:1.8rem;font-weight:900;color:var(--blue)}
+  .stat span{font-size:.88rem;color:var(--muted);font-weight:600}
+
+  /* why */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .why{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;transition:box-shadow .2s,transform .2s}
+  .why:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+  .why .ico{width:52px;height:52px;border-radius:14px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .why .ico svg{width:26px;height:26px;stroke:var(--blue-dark)}
+  .why h3{font-size:1.05rem;color:var(--navy);margin-bottom:.4rem}
+  .why p{color:var(--muted);font-size:.95rem}
+
+  /* about */
+  .about{background:var(--bg-alt)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-img{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3;background:linear-gradient(135deg,var(--blue),var(--navy));position:relative}
+  .about-img img{width:100%;height:100%;object-fit:cover}
+  .about-img .year{position:absolute;left:20px;bottom:20px;background:var(--gold);color:var(--navy);font-family:'Montserrat';font-weight:900;padding:.6rem 1rem;border-radius:12px}
+  .about p{color:var(--muted);margin-bottom:1rem}
+  .vm{display:grid;gap:14px;margin-top:1.5rem}
+  .vm div{background:#fff;border-left:4px solid var(--blue);border-radius:10px;padding:14px 18px}
+  .vm b{font-family:'Montserrat';color:var(--navy);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+  .vm p{margin:.25rem 0 0;font-size:.95rem}
+
+  /* programs */
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+  .tab{font-family:'Montserrat';font-weight:800;font-size:.9rem;padding:.75rem 1.2rem;border-radius:999px;border:2px solid var(--line);background:#fff;cursor:pointer;color:var(--navy)}
+  .tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+  .panel{display:none}
+  .panel.active{display:grid;grid-template-columns:1.3fr .7fr;gap:24px}
+  .subjects{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;align-content:start}
+  .subj{background:var(--bg-alt);border-radius:14px;padding:16px 18px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:.6rem}
+  .subj::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--gold);flex:none}
+  .price-card{background:var(--navy);color:#fff;border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:6px}
+  .price-card .lbl{font-size:.85rem;opacity:.8;font-weight:600}
+  .price-card .amt{font-family:'Montserrat';font-weight:900;font-size:2.6rem;color:var(--gold);line-height:1}
+  .price-card .amt small{font-size:1rem;color:#fff;opacity:.8}
+  .price-card .alt{margin-top:10px;padding-top:12px;border-top:1px solid rgba(255,255,255,.2);font-size:.95rem}
+  .price-card .btn{margin-top:auto;justify-content:center}
+  .note{font-size:.85rem;color:var(--muted);margin-top:16px}
+
+  /* results */
+  .results{background:linear-gradient(180deg,#fff, var(--bg-alt))}
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .quote{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);position:relative}
+  .quote::before{content:"\201C";font-family:Georgia,serif;font-size:4.5rem;line-height:1;color:var(--gold);position:absolute;top:10px;right:20px}
+  .grade{display:inline-block;font-family:'Montserrat';font-weight:900;background:var(--gold-soft);color:var(--blue-dark);padding:.3rem .7rem;border-radius:8px;font-size:.85rem;margin-bottom:12px}
+  .quote p{color:var(--ink);margin-bottom:14px}
+  .quote cite{font-style:normal;font-weight:700;color:var(--muted);font-size:.9rem}
+
+  /* teachers */
+  .teachers{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
+  .t-card{text-align:center;border:1px solid var(--line);border-radius:var(--radius);padding:24px 16px}
+  .avatar{width:96px;height:96px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;font-family:'Montserrat';font-weight:900;font-size:1.6rem;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  .t-card h3{font-size:.95rem;color:var(--navy)}
+  .t-card span{font-size:.85rem;color:var(--blue);font-weight:700}
+
+  /* schedule + location */
+  .visit{background:var(--navy);color:#fff}
+  .visit .section-head h2{color:#fff}
+  .visit .section-head p{color:rgba(255,255,255,.75)}
+  .visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
+  .info{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:28px}
+  .info h3{color:var(--gold);font-size:1rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+  .hours{display:grid;gap:10px;margin-bottom:26px}
+  .hours div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed rgba(255,255,255,.2);padding-bottom:8px}
+  .hours b{font-family:'Montserrat'}
+  .contact-list{list-style:none;display:grid;gap:12px}
+  .contact-list a{text-decoration:none}
+  .contact-list a:hover{color:var(--gold)}
+  .map{border-radius:var(--radius);overflow:hidden;min-height:360px;background:#0e1d44}
+  .map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+
+  /* cta */
+  .cta{background:var(--gold);text-align:center;padding:72px 0}
+  .cta h2{font-size:clamp(1.8rem,4.5vw,2.8rem);color:var(--navy);font-weight:900;text-transform:uppercase;margin-bottom:.6rem}
+  .cta p{color:var(--navy);margin-bottom:1.8rem;font-weight:600}
+  .cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn-navy{background:var(--navy);color:#fff}
+
+  footer{background:#0c1a3d;color:rgba(255,255,255,.75);padding:36px 0;font-size:.9rem}
+  .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  .socials{display:flex;gap:12px}
+  .socials a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
+  .socials a:hover{background:var(--blue)}
+  .socials svg{width:18px;height:18px;fill:#fff}
+
+  .float-wa{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,0,0,.25);z-index:60}
+  .float-wa svg{width:30px;height:30px;fill:#fff}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  @media (max-width:960px){
+    .hero-grid,.about-grid,.visit-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr 1fr}
+    .quotes{grid-template-columns:1fr}
+    .panel.active{grid-template-columns:1fr}
+  }
+  @media (max-width:760px){
+    section{padding:64px 0}
+    .menu-btn{display:block}
+    .nav-links{position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 16px 18px;border-bottom:1px solid var(--line);display:none}
+    .nav-links.open{display:flex}
+    .nav-links li{width:100%}
+    .nav-links a{display:block;padding:12px 0}
+    .why-grid{grid-template-columns:1fr}
+    .hero{padding:64px 0 80px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="Utama">
+    <a href="#" class="brand">
+      <img src="logo.png" alt="Logo Akademik Darul Bakti" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="brand-fallback">DB</span>
+      <span class="brand-text"><small>AKADEMIK</small>DARUL BAKTI</span>
+    </a>
+    <button class="menu-btn" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#program">Program &amp; Yuran</a></li>
+      <li><a href="#kejayaan">Kejayaan</a></li>
+      <li><a href="#guru">Guru</a></li>
+      <li><a href="#lokasi">Lokasi</a></li>
+      <li><a class="btn btn-wa nav-cta wa-link" href="#">Daftar Sekarang</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="badge">● Pendaftaran Sesi 2026 Dibuka</span>
+        <h1>Jom <span class="gold">Tuisyen</span><br>Knowledge Wins</h1>
+        <p class="lead">Pusat tuisyen dipercayai di Jitra sejak 1979. Guru berpengalaman, teknik yang mudah difahami, dan fokus kepada persediaan SPM.</p>
+        <div class="hero-actions">
+          <a class="btn btn-wa wa-link" href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+            WhatsApp Kami
+          </a>
+          <a class="btn btn-ghost" href="#program">Lihat Yuran</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <h3>Kenapa ibu bapa pilih kami</h3>
+        <div class="stat-row">
+          <div class="stat"><b>1979</b><span>Ditubuhkan di Jitra</span></div>
+          <div class="stat"><b>40+</b><span>Tahun pengalaman</span></div>
+          <div class="stat"><b>RM60</b><span>Sebulan per subjek (Tingkatan 4 &amp; 5)</span></div>
+          <div class="stat"><b>7</b><span>Subjek ditawarkan</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Kelebihan Kami</span>
+        <h2>Risau minat belajar hilang? Darul Bakti kan ada.</h2>
+        <p>Kami bantu pelajar faham, bukan sekadar menghafal, supaya mereka lebih yakin di dalam kelas dan dewan peperiksaan.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+          <h3>Cikgu Berpengalaman</h3>
+          <p>Guru terlatih yang sabar dan memberi perhatian kepada pelajar yang memerlukan bantuan.</p>
+        </div>
+        <div class="why reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Teknik Mudah Difahami</h3>
+          <p>Penerangan langkah demi langkah, terutamanya Matematik, subjek paling popular kami.</p>
+        </div>
+        <div class="why reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10"/></svg></div>
+          <h3>Fasiliti Selesa</h3>
+          <p>Bilik kelas yang tersusun dan kondusif supaya pelajar boleh fokus sepenuhnya.</p>
+        </div>
+        <div class="why reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>Harga Berpatutan</h3>
+          <p>Yuran per subjek atau pakej, ikut keperluan anak anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="tentang">
+    <div class="wrap about-grid">
+      <div class="about-img reveal">
+        <img src="kelas.jpg" alt="Suasana kelas di Akademik Darul Bakti" onerror="this.remove()">
+        <span class="year">Sejak 1979</span>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Tentang Kami</span>
+        <h2 style="font-size:clamp(1.8rem,4vw,2.4rem);color:var(--navy);margin:.4rem 0 1rem">Lebih empat dekad mendidik anak-anak Kubang Pasu</h2>
+        <p>Akademik Darul Bakti diasaskan oleh Cikgu Zainol Abidin Mohamad di Jitra pada tahun 1979 dengan satu matlamat: memberi pendidikan yang mudah diakses dan berkesan kepada setiap pelajar.</p>
+        <p>Hari ini kami terus berkhidmat di Kompleks SIM, Pekan Jitra 2, dengan standard pengajaran yang sama yang telah dipercayai oleh ibu bapa sejak beberapa generasi.</p>
+        <div class="vm">
+          <div><b>Visi</b><p>Menjadi pusat tuisyen dan bimbingan yang cemerlang di negeri Kedah.</p></div>
+          <div><b>Misi</b><p>Memastikan setiap pelajar menerima pendidikan yang lengkap daripada guru terlatih, sambil terus meningkatkan keberkesanan pengajaran.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="program">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Program &amp; Yuran</span>
+        <h2>Subjek mengikut tahap pengajian</h2>
+        <p>Pilih tahap anak anda untuk melihat subjek dan yuran.</p>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-panel="p-spm">Tingkatan 4 – 5 (SPM)</button>
+        <button class="tab" role="tab" aria-selected="false" data-panel="p-menengah">Tingkatan 1 – 3</button>
+        <button class="tab" role="tab" aria-selected="false" data-panel="p-rendah">Tahun 2 – 6</button>
+      </div>
+
+      <div class="panel active" id="p-spm" role="tabpanel">
+        <div class="subjects">
+          <div class="subj">Matematik</div><div class="subj">Matematik Tambahan</div><div class="subj">Sains</div>
+          <div class="subj">Biologi</div><div class="subj">Sejarah</div><div class="subj">Bahasa Melayu</div><div class="subj">Bahasa Inggeris</div>
+        </div>
+        <div class="price-card">
+          <span class="lbl">Setiap subjek</span>
+          <span class="amt">RM60 <small>/ bulan</small></span>
+          <div class="alt">Pakej semua subjek: <b>RM120</b></div>
+          <a class="btn btn-gold wa-link" href="#">Tanya &amp; Daftar</a>
+        </div>
+      </div>
+
+      <div class="panel" id="p-menengah" role="tabpanel">
+        <div class="subjects">
+          <div class="subj">Matematik</div><div class="subj">Sains</div><div class="subj">Bahasa Melayu</div><div class="subj">Bahasa Inggeris</div>
+        </div>
+        <div class="price-card">
+          <span class="lbl">Pakej 4 subjek</span>
+          <span class="amt">RM150 <small>/ bulan</small></span>
+          <div class="alt">Pakej paling jimat untuk menengah rendah</div>
+          <a class="btn btn-gold wa-link" href="#">Tanya &amp; Daftar</a>
+        </div>
+      </div>
+
+      <div class="panel" id="p-rendah" role="tabpanel">
+        <div class="subjects">
+          <div class="subj">Matematik</div><div class="subj">Sains</div><div class="subj">Bahasa Melayu</div><div class="subj">Bahasa Inggeris</div>
+        </div>
+        <div class="price-card">
+          <span class="lbl">Pakej 4 subjek</span>
+          <span class="amt">RM120 <small>/ bulan</small></span>
+          <div class="alt">Asas kukuh sejak sekolah rendah</div>
+          <a class="btn btn-gold wa-link" href="#">Tanya &amp; Daftar</a>
+        </div>
+      </div>
+      <p class="note">* Yuran tertakluk kepada perubahan. Sila hubungi kami untuk maklumat terkini.</p>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results" id="kejayaan">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Kejayaan Pelajar</span>
+        <h2>Daripada gagal kepada lulus. Daripada lulus kepada cemerlang.</h2>
+        <p>Antara maklum balas ibu bapa selepas keputusan SPM.</p>
+      </div>
+      <div class="quotes">
+        <div class="quote reveal">
+          <span class="grade">SPM: 7A</span>
+          <p>Alhamdulillah, anak saya dapat 7A dengan Matematik A. Terima kasih cikgu-cikgu Darul Bakti.</p>
+          <cite>— Ibu kepada pelajar SPM</cite>
+        </div>
+        <div class="quote reveal">
+          <span class="grade">Matematik: G → C</span>
+          <p>Sebelum ni Matematik tak pernah lulus. Bila tuisyen dengan cikgu di sini, alhamdulillah dapat C untuk SPM.</p>
+          <cite>— Ibu kepada pelajar SPM</cite>
+        </div>
+        <div class="quote reveal">
+          <span class="grade">93% pelajar</span>
+          <p>Hampir semua responden kaji selidik kami bersetuju kelas tuisyen membantu mereka lebih faham pelajaran di sekolah.</p>
+          <cite>— Kaji selidik pelajar, 2026</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHERS -->
+  <section id="guru">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Barisan Pendidik</span>
+        <h2>Kenali guru-guru kami</h2>
+      </div>
+      <div class="teachers">
+        <div class="t-card reveal"><div class="avatar">ZA</div><h3>Zainol Abidin Mohamad</h3><span>Pengasas</span></div>
+        <div class="t-card reveal"><div class="avatar">AS</div><h3>Aizudin Sohaimi</h3><span>Matematik</span></div>
+        <div class="t-card reveal"><div class="avatar">NA</div><h3>Nadhira Azreen Azmi</h3><span>Matematik</span></div>
+        <div class="t-card reveal"><div class="avatar">RB</div><h3>Rafiyah Beiji</h3><span>Matematik</span></div>
+        <div class="t-card reveal"><div class="avatar">SR</div><h3>Sir Rafiq</h3><span>Sains</span></div>
+        <div class="t-card reveal"><div class="avatar">IN</div><h3>Intan Norashimah Osman</h3><span>Bahasa Inggeris</span></div>
+        <div class="t-card reveal"><div class="avatar">PQ</div><h3>Puteri Nur Qistina Razin</h3><span>Bahasa Inggeris</span></div>
+        <div class="t-card reveal"><div class="avatar">MA</div><h3>Muhamad Akmal Razelan</h3><span>Bahasa Melayu</span></div>
+        <div class="t-card reveal"><div class="avatar">AC</div><h3>Azura Che Ani</h3><span>Bahasa Melayu</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit" id="lokasi">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" style="color:var(--gold)">Waktu &amp; Lokasi</span>
+        <h2>Jumpa kami di Pekan Jitra 2</h2>
+        <p>Tingkat 2, Kompleks SIM, mudah dicapai dari sekitar Jitra dan Kubang Pasu.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="info reveal">
+          <h3>Waktu Kelas</h3>
+          <div class="hours">
+            <div><b>Jumaat</b><span>8:30 pg – 12:15 tgh · 2:30 – 5:00 ptg</span></div>
+            <div><b>Sabtu</b><span>8:30 pg – 12:15 tgh · 2:30 – 5:00 ptg</span></div>
+          </div>
+          <h3>Hubungi</h3>
+          <ul class="contact-list">
+            <li>📍 No. 211C-220C, Tingkat 2, Kompleks SIM, Pekan Jitra 2, 06000 Jitra, Kedah</li>
+            <li>💬 <a class="wa-link" href="#">WhatsApp: 013-525 3712</a></li>
+            <li>☎️ <a href="tel:+6049171241">Pejabat: 04-917 1241</a></li>
+            <li>✉️ <a href="mailto:pta.darulbakti@gmail.com">pta.darulbakti@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="map reveal">
+          <iframe title="Peta lokasi Akademik Darul Bakti" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Kompleks%20SIM%2C%20Pekan%20Jitra%202%2C%2006000%20Jitra%2C%20Kedah&z=16&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <h2>Jom Masuk Tuisyen!</h2>
+      <p>Tempat terhad. Daftar Sesi 2026 sekarang melalui WhatsApp.</p>
+      <div class="btn-row">
+        <a class="btn btn-navy wa-link" href="#">Daftar Melalui WhatsApp</a>
+        <!-- Gantikan href di bawah dengan pautan Google Form pendaftaran -->
+        <a class="btn btn-wa" style="background:#fff;color:var(--navy);box-shadow:none" href="https://forms.gle/GANTIKAN" target="_blank" rel="noopener">Isi Borang Pendaftaran</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><b style="color:#fff;font-family:'Montserrat'">AKADEMIK DARUL BAKTI</b> · Knowledge Wins<br>© <span id="yr"></span> Pusat Tuisyen Akademik Darul Bakti Kubang Pasu</div>
+    <div class="socials">
+      <a href="https://www.tiktok.com/@darulbakti" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.6a2.9 2.9 0 1 1-2-2.7V9.4a6.3 6.3 0 1 0 5.4 6.2V8.7a8.2 8.2 0 0 0 3.8 1V6.7z"/></svg></a>
+      <!-- Gantikan dengan URL penuh halaman Facebook -->
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6c0-.9.6-1 1-1h3V1h-4c-3.3 0-4 2.4-4 4v3H7v4h3v11h4V12h3.5l.5-4H14z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa wa-link" href="#" aria-label="WhatsApp Akademik Darul Bakti">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+</a>
+
+<script>
+  // === TETAPAN: tukar nombor WhatsApp di sini sahaja ===
+  const WHATSAPP = "60135253712";
+  const MESEJ = "Assalamualaikum, saya ingin bertanya tentang pendaftaran tuisyen di Akademik Darul Bakti.";
+
+  const waUrl = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MESEJ);
+  document.querySelectorAll(".wa-link").forEach(a => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // Menu mudah alih
+  const btn = document.querySelector(".menu-btn"), links = document.querySelector(".nav-links");
+  btn.addEventListener("click", () => { const o = links.classList.toggle("open"); btn.setAttribute("aria-expanded", o); });
+  links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => links.classList.remove("open")));
+
+  // Tab program
+  document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", "false"));
+    document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+    t.setAttribute("aria-selected", "true");
+    document.getElementById(t.dataset.panel).classList.add("active");
+  }));
+
+  // Animasi muncul semasa skrol
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
